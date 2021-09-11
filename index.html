@@ -1,1 +1,64 @@
-<h1> Hello! </h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSBU RANDOM FIGHTER</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1 class = "center">Super Smash Bros Ultimate Random Character Generator</h1>
+    <div id="container">
+        <button class = "rngbtn" >Generate</button> 
+        
+        <p id="demo"></p>
+    </div>
+    <ul>
+      
+    </ul>
+    <div>
+  
+        <div style="position: absolute; left: 10px; top: 40px;"> 
+            <img src="max.png" class = "btn" width="70" height="70" onclick="DoSomething();" />
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+  </body>
+
+
+
+
+ 
+<button type="button" class="collapsible">Why is this more accurate than other random character generators?</button>
+<div class="content">
+  <p>
+      - Echo fighters are combined to minimize duplicates (ex. simon and richter combined so there isn't 2x chance of getting them) <br>
+      - Mii fighter is added <br>
+      - Math.random javscript function is used for RNG instead of Super Smash Bros Ultimate PRNG (Pseudo Random Number Generator) which picks a seed when a lobby is created and does not refresh unless you exit the menu. <br>
+      - Smash Bros PRNG chooses more character seeds directly and inversley based on amt. of hours played per character: the less you play a character the more chance you have of recieving it in "random" selection <br>
+      - Cloud has been removed from the list bc he is broken af <br>
+
+
+
+
+  </p>
+</div>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+</html>
